@@ -12,10 +12,6 @@ import Swinject
 internal struct SwinjectStoryboardOption: ServiceKeyOption {
 
     internal let controllerType: String
-
-	internal func hash(into: inout Hasher) {
-		into.combine(self.controllerType)
-	}
     
     internal init(controllerType: Container.Controller.Type) {
         self.controllerType = String(reflecting: controllerType)
